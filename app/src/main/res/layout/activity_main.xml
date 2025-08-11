@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_img3"
+    tools:context=".MainActivity">
+
+    <!-- EditText for recipient input (Email or Phone number) -->
+    <EditText
+        android:id="@+id/editRecipient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="Enter email or phone number"
+        android:background="@drawable/edittext_bg"
+        android:padding="12dp"
+        android:textColor="#000000"
+        android:textColorHint="#BBBBBB" />
+
+    <!-- EditText for message input -->
+    <EditText
+        android:id="@+id/editMessage"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/editRecipient"
+        android:layout_margin="16dp"
+        android:hint="Enter your message"
+        android:gravity="top"
+        android:background="@drawable/edittext_bg"
+        android:padding="12dp"
+        android:textColor="#000000"
+        android:textColorHint="#BBBBBB" />
+
+    <!-- Button to attach files -->
+    <Button
+        android:id="@+id/btnAttach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attach File"
+        android:layout_below="@id/editMessage"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#444444"
+        android:textColor="#FFFFFF" />
+
+    <!-- TextView to display the name of the attached file -->
+    <TextView
+        android:id="@+id/txtFileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/btnAttach"
+        android:layout_alignTop="@id/btnAttach"
+        android:layout_marginStart="12dp"
+        android:text="No file selected"
+        android:textColor="#000000" />
+
+    <!-- Button to send the email or SMS -->
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:layout_below="@id/btnAttach"
+        android:layout_margin="16dp"
+        android:backgroundTint="#6200EE"
+        android:textColor="#ffffff" />
+
+    <!-- Button to make a phone call -->
+    <Button
+        android:id="@+id/btnCall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Call"
+        android:layout_below="@id/btnSend"
+        android:layout_margin="16dp"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#ffffff" />
+
+    <!-- Button to open the chat -->
+    <Button
+        android:id="@+id/btnChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chat"
+        android:layout_below="@id/btnCall"
+        android:layout_margin="16dp"
+        android:backgroundTint="#FF5722"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>
